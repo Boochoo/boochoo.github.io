@@ -1,0 +1,16 @@
+
+img.image{
+	max-height:100%;
+	max-width:100%;
+	width:25%;
+	margin:0 auto;
+	max-width:500px;
+	-moz-border-radius: 5px;
+	//
+	-webkit-border-radius: 5px;	
+}
+
+@media all and (min-width: 36em){
+	#photo{ float: left; width:100%; }
+	#footer{ float: left; width:100%; }
+}

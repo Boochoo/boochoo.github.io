@@ -1,0 +1,96 @@
+body{
+margin: 0px;
+padding:0px;
+background-color: #dddddd;
+
+}
+h1{
+font: 16px verdana;
+color: #294703;
+padding-left: 5px;
+}
+
+h2{
+	font: 14px verdana;
+	color: #294703;
+	padding-left: 5px;
+}
+h3{
+	font: 14px verdana;
+	color: #294703;
+	padding-left: 5px;
+	font-weight: normal;
+	text-align:center;
+}
+
+p{
+	font: 12px verdana;
+	color: #294703;
+	padding-left: 5px;
+
+}
+
+#container{
+float:left;
+border: 0px solid;
+background-color: #dddddd;
+
+
+}
+
+#left{
+float:left;
+border: 0px solid;
+padding-left: 10px;
+width: 300px;
+
+}
+#header{
+	text-align: center;
+	border: 0px solid;
+	background-color: #cccccc;
+
+
+}
+
+#info{
+	float:left; 
+	border: 0px solid;
+
+
+}
+
+#story{
+	
+	border: 0px solid;
+	min-height: 200px;
+	background-color: #cccccc;
+
+
+}
+
+#feedback{
+	
+	border: 0px solid;
+	min-height: 200px;
+	background-color: #cccccc;
+
+
+}
+
+#grade{
+	
+	border: 0px solid;
+	background-color: #cccccc;
+
+
+
+}
+
+#animation{
+
+	float:left;
+	background-color: #cccccc;
+	border: 0px solid;
+
+}

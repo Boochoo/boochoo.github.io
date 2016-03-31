@@ -1,0 +1,396 @@
+<html>
+<head>
+<title>Mobile Pro 101</title>
+<meta charset="utf-8"/>
+
+<link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="mobilejQuery.css" type="text/css">
+<link rel="stylesheet" href="drinking_games.css" type="text/css">
+<link rel="stylesheet" href="player.css" type="text/css">
+<link rel="stylesheet" href="player2.css" type="text/css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- <script src="mobilejQuery.js"></script> -->
+<script src="diceRoll.js"></script>
+<!-- <script src="font.js"></script> -->
+
+<script src="games_gallery.js"></script>
+<script src="flip_coin.js"></script>
+
+<script>
+var sound = new Audio();
+sound.src= "coin.mp3";
+</script>
+
+</head>
+<body >
+<div data-role="page" id="photo" data-theme="b" data-content-theme="b">
+<header  data-role="header" data-position="inline" data-theme="b" data-content-theme="b">
+	<h1>Drinking Games</h1>
+	<a href="#home" data-icon="heart">tipC</a>
+	<div>
+	<nav data-role="navbar" data-position="fixed" >
+		<ul>
+			<li><a href="drinking_games.html" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+			<li><a href="#blog" data-icon="grid">Games</a></li>
+			<li><a href="#artist" data-icon="info">Karaoke</a></li>
+			<li><a href="#about" data-icon="bird">Blueprints</a></li>		
+		</ul>
+	</nav>
+	</div>
+</header>
+	
+	
+	<div id="art" data-theme="b" data-content-theme="b">
+	
+	<h2>The flirt book</h2><br/>
+	
+    
+	<ul class="graffiti">
+      <li><a href="#flip"><img src="images/basquiat_tn.jpg" alt="The New York street graffiti artist "></a> &nbsp;</li>
+      <li><a href="#artist"><img src="images/LaVonne_LaRue_02_tn.jpg" alt="LaVonne_LaRue's Mighty Duck"></a>&nbsp;</li>
+      <!-- <li><a><img src="images/Lorenzo_Garcia_01_tn.jpg" alt="Lorenzo Garcia's The Dancer"></a></li>
+      <li><a><img src="images/Lorenzo_Garcia_03_tn.jpg" alt="Lorenzo Garcia's Mother'"></a></li> -->
+      <li><a href="#blog"><img src="images/basquiat_02_tn.jpg" alt="Hillary Goldwynn's Blue Sky"></a>&nbsp;</li>
+    </ul>
+	<script src="games_gallery.js"></script>
+
+   	<br/><h3>Mouse over the pics to see details</h3>
+
+			
+	</div>
+	
+	
+
+	<article data-role="content" data-filter="true">
+		
+		<ul data-role="listview">
+		
+		<li>
+		<a href="#flip">
+		<h3>Let the game begin</h3>
+		</a>
+		</li>		
+		</ul>
+		
+	</article>
+	
+	
+
+<footer data-role="footer" data-position="fixed" id="footer">
+	
+</footer>
+</div><!--end of home page-->
+
+<!---Member page starts-->
+<div data-role="page" id="flip" data-position="inline" data-theme="b" data-content-theme="b">
+<header data-role="header">
+	<h1>Flip  and Drink</h1>
+	<a href="#photo" data-icon="grid" data-iconpos="notext">Photo</a>
+	<nav data-role="navbar" data-position="fixed" >
+		<ul>
+			<li><a href="drinking_games.html" data-icon="home" >Home</a></li>
+			<li><a href="#blog" data-icon="grid" class="ui-btn-active ui-state-persist">Games</a></li>
+			<li><a href="#artist" data-icon="info">Karaoke</a></li>
+			<li><a href="#about" data-icon="bird">Blueprints</a></li>		
+		</ul>
+	</nav>
+	</header>
+	
+	<div id="flip_coin">
+		 <h3 class="rules_title">
+		      Flip and Drink
+		 </h3>
+		 <h3>Requirements</h3>
+		 <h3 class="require">Six pack of Karhu <br/>
+							Any number of players <br/>
+								 
+		 
+		 </h3><br/>
+		 
+		 <h3 class="rules">Rules</h3>
+		 
+		 <h4 class="require"> The Rules are quite simple, even a dead drunk person can follow them. </br>
+							  Just call <i>Head</i> or <i>Tail</i> then hit the flip button. </br>
+							  If the picture turns out to be the one you called, you can </br>
+							   pass on from taking a shot of drink and give your friend a chance <br/>
+							   to flip, but if your prediction was wrong then you must take the shot <br/>
+
+		 </h4>
+		 
+		<ul class="flipper">
+			<li ><img name="coins" src="images/flip.jpg" ></img> </li>
+		</ul>
+		
+		<button onmousedown="sound.play()" onclick="return flipItUp();"> Flip Me</button>
+		
+	</div>
+<footer data-role="footer" data-position="fixed">
+	
+</footer>
+</div>
+
+<div data-role="page" id="about" data-transition="flip" data-position="inline" data-theme="b" data-content-theme="b">
+<header data-role="header">
+	<h1>Shots </h1>
+	<a href="#photo" data-icon="grid" data-iconpos="notext">Photo</a>
+	<nav data-role="navbar">
+		<ul>
+			<li><a href="drinking_games.html" data-icon="home" >Home</a></li>
+			<li><a href="#blog" data-icon="grid">Games</a></li>
+			<li><a href="#artist" data-icon="info">Karaoke</a></li>
+			<li><a href="#about" data-icon="bird" class="ui-btn-active ui-state-persist">Blueprints</a></li>		
+		</ul>
+	</nav>
+</header>
+		<div>
+		<h4 class="require2"> tipC, the drinking game web application is made for </br>
+							  Mobile Programming course by two novice web  </br>
+							  developers. As this is the version that only shows </br>
+							  the blueprint of the Web app, the developers wish to <br/>
+							  update the website in the near future. <br/><br/><br/>
+							  We would love to thank our teachers for their humble support<br/>
+							  and patiently helping us out while we were at the labs.  
+
+		 </h4>
+		
+		
+		</div>
+			
+
+<footer data-role="footer" data-position="fixed">
+	
+</footer>
+</div>	<!---Member page ends-->
+<!---Blog page starts-->
+<div data-role="page" id="blog" data-transition="flip" data-position="inline" data-theme="b" data-content-theme="b">
+<header data-role="header">
+	<h1>Game Gallery</h1>
+	<a href="#photo" data-icon="grid" data-iconpos="notext">Photo</a>
+	
+	<nav data-role="navbar">
+		<ul>
+			<li><a href="drinking_games.html" data-icon="home" >Home</a></li>
+			<li><a href="#blog" data-icon="grid" class="ui-btn-active ui-state-persist">Games</a></li>
+			<li><a href="#artist" data-icon="info">Karaoke</a></li>
+			<li><a href="#about" data-icon="bird">Blueprints</a></li>		
+		</ul>
+	</nav>
+	
+</header>
+<!-- <div data-role="collapsible" data-theme="a" data-content-theme="a">
+		<h4>Dice One</h4>
+		<div id="die1" class="dice">0</div>
+		<div id="die2" class="dice">0</div>
+		<button onclick="return rollDice();">Roll Dice</button>
+		
+		<h2 id="status" style="clear:left;"></h2>
+		
+</div> -->
+<div id="collapse_flip" data-role="collapsible" data-theme="a" data-content-theme="a">
+	<h4>Flip and Drink</h4>
+	
+	<ul>
+		<li><a href="#flip">Flip and drink</a></ul>
+	</ul>
+</div>	
+		
+		
+		
+<footer data-role="footer" data-position="fixed">
+	
+</footer>
+</div><!---Blog page ends-->
+
+<!---Artist page starts-->
+<div data-role="page" id="artist" data-url="karaoke.html" data-transition="flip" 
+	data-position="inline" data-theme="b" data-content-theme="b">
+<header data-role="header">
+	<h1>Karaoke</h1>
+	<a href="#photo" data-icon="grid" data-iconpos="notext">Photo</a>
+	
+	<nav data-role="navbar">
+		<ul>
+			<li><a href="drinking_games.html" data-icon="home" >Home</a></li>
+			<li><a href="#blog" data-icon="grid" >Games</a></li>
+			<li><a href="#artist" data-icon="info" class="ui-btn-active ui-state-persist">Karaoke</a></li>
+			<li><a href="#about" data-icon="bird">Blueprints</a></li>		
+		</ul>
+	</nav>
+</header>
+
+
+<div data-role="collapsible" data-theme="a" data-content-theme="a">
+			<h4>Locked outta heaven <i>by</i> <b>Bruno mars</b></h4>
+			<ul class="player">
+				<li data-src="audio/Locked Out Of Heaven.mp3"> &nbsp; <b>Locked out of heaven</b></li>
+			
+			</ul>
+			<script src="script2.js"></script>
+	<div id ="lyrics" data-role="collapsible" data-theme="a" data-content-theme="a">
+			<h4 >Lyrics</h4>
+			<h3 class="lyrics_h3">Locked Out Of Heaven</h3>
+			<h4 class="lyrics">One, two, one, two, three<br/>
+
+				Oh, yeah, yeah,<br/>
+				Oh, yeah, yeah, yeah, yeah,<br/>
+				Ooh!<br/>
+				Oh, yeah, yeah,<br/>
+				Oh, yeah, yeah, yeah, yeah,<br/>
+				Ooh!
+
+				Never had much faith in love or miracles<br/>
+				Ooh!
+				Never wanna put my heart on the line<br/>
+				Ooh!
+				But swimming in your water is something spiritual<br/>
+				Ooh!<br/>
+				I'm born again every time you spend the night<br/>
+				Ooh!<br/>
+
+				'Cause your sex takes me to paradise<br/>
+				Yeah, your sex takes me to paradise<br/>
+				And it shows, yeah, yeah, yeah<br/>
+
+				'Cause you make me feel like I've been locked out of heaven<br/>
+				For too long, for too long<br/>
+				Yeah, you make me feel like I've been locked out of heaven<br/>
+				For too long, for too long<br/>
+
+				Oh, yeah, yeah, yeah, yeah,<br/>
+				Ooh!<br/>
+				Oh, yeah, yeah,<br/>
+				Oh, yeah, yeah, yeah, yeah,<br/>
+				Ooh!<br/>
+
+				You bring me to my knees, you make me testify<br/>
+				You can make a sinner change his ways<br/>
+				Open up your gates 'cause I can't wait to see the light<br/>
+				And right there is where I wanna stay<br/>
+
+				'Cause your sex takes me to paradise<br/>
+				Yeah, your sex takes me to paradise<br/>
+				And it shows, yeah, yeah, yeah<br/>
+
+				'Cause you make me feel like I've been locked out of heaven<br/>
+				For too long, for too long<br/>
+				Yeah, you make me feel like I've been locked out of heaven<br/>
+				For too long, for too long<br/>
+
+				Oh, oh, oh, oh, yeah, yeah, yeah<br/>
+				Can I just stay here?<br/>
+				Spend the rest of my days here?<br/>
+				Oh, oh, oh, oh, yeah, yeah, yeah<br/>
+				Can't I just stay here?<br/>
+				Spend the rest of my days here?<br/>
+
+				'Cause you make me feel like I've been locked out of heaven<br/>
+				For too long, for too long<br/>
+				Yeah, you make me feel like I've been locked out of heaven<br/>
+				For too long, for too long<br/>
+
+				Oh, yeah, yeah, yeah, yeah,<br/>
+				Ooh!<br/>
+				Oh, yeah, yeah,<br/>
+				Oh, yeah, yeah, yeah, yeah,<br/>
+				Ooh!<br/>
+           </h4>
+			
+	</div>		
+</div>
+
+
+<div data-role="collapsible" data-theme="a" data-content-theme="a">
+			<h4>Somebody That I Used To Know <i>by</i> <b>Gotye</b></h4>
+			
+			<ul class="player2">
+						<li data-src="audio/Somebody That I Used To Know.mp3"> &nbsp; <b>Somebody That I Used To Know</b></li>
+						<!-- <li data-src="audio/Somebody That I Used To Know.mp3"> &nbsp; <b>Somebody That I Used To Know</b></li>
+						<li data-src="audio/Somebody That I Used To Know.mp3"> &nbsp; <b>Somebody That I Used To Know</b></li> -->
+			</ul>
+			<script src="script3.js"></script>
+
+			<div id ="lyrics" data-role="collapsible" data-theme="a" data-content-theme="a">
+			<h4 >Lyrics</h4>
+			<h3 class="lyrics_h3"> Somebody That I Used To Know</h3>
+			<h4 class="lyrics">
+							<br/>
+							Now and then I think of when we were together<br/>
+							Like when you said you felt so happy you could die<br/>
+							Told myself that you were right for me<br/>
+							But felt so lonely in your company<br/>
+							But that was love and it's an ache I still remember<br/><br/>
+
+							You can get addicted to a certain kind of sadness<br/>
+							Like resignation to the end, always the end<br/>
+							So when we found that we could not make sense<br/>
+							Well you said that we would still be friends<br/>
+							But I'll admit that I was glad it was over<br/><br/>
+
+							But you didn't have to cut me off<br/>
+							Make out like it never happened and that we were nothing<br/>
+							And I don't even need your love<br/>
+							But you treat me like a stranger and that feels so rough<br/>
+							No you didn't have to stoop so low<br/>
+							Have your friends collect your records and then change your number<br/>
+							I guess that I don't need that though<br/>
+							Now you're just somebody that I used to know<br/><br/>
+
+							Now you're just somebody that I used to know<br/>
+							Now you're just somebody that I used to know<br/><br/>
+
+							<br/>
+							Now and then I think of all the times you screwed me over<br/>
+							But had me believing it was always something that I'd done<br/>
+							But I don't wanna live that way<br/>
+							Reading into every word you say<br/>
+							You said that you could let it go<br/>
+							And I wouldn't catch you hung up on somebody that you used to know<br/><br/>
+
+							<br/>
+							But you didn't have to cut me off<br/>
+							Make out like it never happened and that we were nothing<br/>
+							And I don't even need your love<br/>
+							But you treat me like a stranger and that feels so rough<br/>
+							And you didn't have to stoop so low<br/>
+							Have your friends collect your records and then change your number<br/>
+							I guess that I don't need that though<br/>
+							Now you're just somebody that I used to know<br/><br/>
+
+							Somebody<br/>
+							(I used to know)<br/>
+							Somebody<br/>
+							(Now you're just somebody that I used to know)<br/><br/>
+
+							(I used to know)<br/>
+							(That I used to know)<br/>
+							(I used to know)<br/>
+							Somebody<br/>
+
+			</h4>
+			
+			
+	</div>
+</div>
+
+
+
+<div data-role="collapsible" data-theme="a" data-content-theme="a">
+<h4>IS is WAS <i>by</i> <b>C-4</b></h4>			<p></p>
+	</div>
+<footer data-role="footer" data-position="fixed">
+	
+</footer>
+
+</div><!---Artist page ends-->
+
+</body>
+
+
+</html>

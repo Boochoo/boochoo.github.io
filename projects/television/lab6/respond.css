@@ -1,0 +1,272 @@
+body{
+	background-color:#CFD1D1;
+	font-family:'Nova Square', cursive;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	line-height:1,5;
+
+}
+
+.main_body{
+	width: 70%;
+	margin: 0 auto; 
+	clear: both;
+}
+
+.main_header nav{
+    background: #666;
+	margin: 60px auto 50px auto;
+	font-size: 20px;
+	height: 40px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+/* making its functionality similar in all browser
+	it is best to add it to most of the classes*/
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+}
+
+.main_header nav ul{
+	list-style:none;
+	margin:0 auto;
+	/*centralizing doesn't work because the ul li has to float left so that the transformation on devices can be smooth'*/
+	text-align:center;
+}
+
+.main_header nav ul li{
+	display:inline;
+	cursor:pointer;
+	}
+
+.main_header nav a:link, .main_header nav a:visited {
+	color: #fff;
+	display: inline-block;
+	height: 30px;
+	padding: 5px 35px;
+	text-decoration: none;
+}
+
+.main_header nav ul li .current a:active, .main_header nav ul li  .current a:hover
+{
+	color:blue;
+	background-color:yellow;
+
+}
+
+a {
+	outline: 0;
+	}
+
+a:link, a:visited {
+	color: #339933;
+	padding: 0 1px;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	background-color: #1D1F1D;
+	color: #fff;
+	text-decoration: none;
+}
+.current{
+	background-color:#1D1F1D;
+}
+
+.main_report {
+	overflow: hidden;
+	line-height: 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+h3{
+	font-style:italic;
+}
+
+
+
+.report_content {
+	width: 68%;
+	float: left;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+.first_answer {
+	background-color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	padding: 3% 5%;	
+	margin-bottom: 3%;
+}
+/*styling the side menus*/
+.top_nav{
+	width: 24%;
+	float: right;
+	margin-left: 2%;
+	border-radius: 5px;
+	padding: 2% 3%;
+	background-color: #FFF;
+	margin-bottom: 2%;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+		
+}
+.middle_nav{
+	width: 24%;
+	float: right;
+	margin-left: 2%;
+	border-radius: 5px;
+	padding: 2% 3%;
+	background-color: #FFF;
+	margin-bottom: 2%;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+		
+}
+.ermi{
+	float:left ; 
+	width:76%;
+	margin:0 auto;
+	max-width:500px;
+	-moz-border-radius: 5px;
+	//
+	-webkit-border-radius: 5px;	
+}
+
+.basti{
+	float:left ; 
+	width:76%;
+	margin:0 auto;
+	max-width:500px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+.soumar{
+	float:left ; 
+	width:76%;
+	margin:0 auto;
+	max-width:500px;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+/*the footer section*/
+.footer {
+	width: 100%;
+	float: left;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-left: 0;
+	color: #FFF;
+	background-color: #666;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	
+}
+
+.footer p {
+	width: 91%;
+	margin: 2% auto;
+}
+
+/*making the website responsive*/
+@media only screen and (min-width: 150px) and (max-width:780px)
+{
+	.main_body{
+	/*we only have to increase the the width and the font
+	size so it can be fit*/
+	/*the rest will stay the same*/
+	width: 91%;
+	font-size: 87%;
+	}
+	.main_header nav{
+    background: #666;
+	margin-bottom: 0;
+	/*by multiplying the number of the navs by the original height( 4 navs * 40px) */
+	height: 160px;
+	}
+	.main_header nav ul{
+	padding-left: 0;
+	
+	}
+	.main_header nav ul li{
+	width:100%;
+    float:left;
+    }
+	
+	.main_report{
+	margin-top:6%;
+	margin-bottom:4%;
+	}
+	.report_content {
+	width: 100%;
+	}
+	
+	.first_answer {
+		background-color: #FFF;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+		padding: 2% 5%;
+		margin-bottom: 4%;
+	}
+	
+	.top_nav{
+	width: 88%;
+	float: right;
+	margin-left: 0;
+	padding: 0 6%;
+	margin-top: 4%;
+	margin-bottom: 0;
+		}
+	.middle_nav{
+	width: 88%;
+	float: right;
+	margin-left: 0;
+	padding: 0 6%;
+	margin-top: 4%;
+	margin-bottom: 0;
+		}
+	
+		
+	.top_nav p{
+	width:86%;
+	}
+	
+	.ermi{
+	float:left ; 
+	width:100%;
+	margin:0 auto;
+	padding-bottom:5px;
+	max-width:800px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+	.basti{
+	float:left ; 
+	width:100%;
+	margin:0 auto;
+	padding-bottom:5px;
+	max-width:800px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+	.soumar{
+	float:left ; 
+	width:100%;
+	margin:0 auto;
+	padding-bottom:5px;
+	max-width:800px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+}

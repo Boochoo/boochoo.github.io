@@ -1,0 +1,76 @@
+.lyrics_h4{
+ color:FF0000;
+
+}
+
+#lyrics{
+  background-color:60B9CE;
+
+}
+.lyrics{
+	font-family:'Nova Square', cursive;
+    color:#404040 	;
+	background-color:#FFCC99;
+	text-align:center;
+}
+
+.lyrics_h3{
+	color:#AFCFE6;
+    font-family:'Nova Square', cursive;
+	color:black;
+	text-align:center;
+}
+
+ul.player2 {
+	width: 450px;
+	margin: 0 auto;
+	margin-top: 11px;
+	list-style: none;
+	text-align:center;
+}
+
+ul.player2 li {
+	/* border-bottom: 1px solid #999; */
+	/* color: #444; */
+	padding: 9px 5px 1px 40px;
+	background: url(images/media.png) no-repeat 8px 7px;
+	/* background-color: yellow; */
+	background-position: 9px 4px;
+	cursor: pointer;
+	height:45px;
+}
+
+ul.player2 li:first-child {
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top: none;
+}
+
+ul.player2 li:last-child {
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom: none;
+}
+
+ul.player2 li:hover {
+	background-color: brown;
+	color: ;
+}
+
+ul.player2 li#playing {
+	height:40px;
+	background: url(images/play.png) no-repeat 8px 7px;
+	background-color: #FCF4DC;
+	color: #2176C7;
+	font-weight: bold;
+	background-position: 9px 4px;
+}
+
+ul.player2 li#paused {
+	background: url(images/pause.png) no-repeat 8px 7px;
+	background-color: green;
+	color: #FFF;
+	font-weight: bold;
+	background-position: 9px 4px;
+}
+

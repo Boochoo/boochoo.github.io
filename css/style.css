@@ -16,10 +16,11 @@ a{
     width : 80%;
     margin: auto;
     overflow: auto;
+    padding-top: 20px;
 }
 
 header{
-    background: #555555;
+    background: #A9A9A9;
     min-height: 55px;
     color: #ffffff;
 }
@@ -65,9 +66,17 @@ section{
     padding : 20px 0;
     overflow: hidden;
 }
-
+.smIcons{
+    text-align: center;
+}
+.smIcons ul li{
+    display: inline-block;
+    float: left;
+    margin-right: 25px;
+    text-align: center;
+}
 .tagline{
-    background: #FF6600;
+    background:  #BDBDBD;
     color : #ffffff;
 }
 
@@ -100,24 +109,24 @@ section{
 }
 
 footer{
-    background: #03899c;
+    background: #DBDBDB;
     height: 55px;
     color : #ffffff;
     text-align: center;
     padding-top: -10px;
-
-    position: fixed;
+    bottom: 0;
+    /*position: fixed;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0;*/
 
 
 }
 
 .overlay{
     display: none;
-    background: #555555 no-repeat top center;
-    color: #ffffff;
+    background: #C7C7C7 no-repeat top center;
+    color: #707070;
     position: absolute;
     top: 0;
     left: 0;
@@ -154,6 +163,7 @@ footer{
         width: 48%;
         margin-right: 8px;
     }
+
 }
 
 @media (max-width: 568px) {

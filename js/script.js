@@ -3,6 +3,39 @@
  */
 $(document).ready(function(){
 
+    var galleryId = 1;
+    $('.projects').each( function() {
+        $(this).find('a').attr('data-lightbox', 'projects');
+    });
+    // Set the link's `title` based on the image's `alt` attribute
+    $('.projects').find('a').each( function() {
+        var alt = $(this).find('img').attr('alt');
+        $(this).attr('title', alt);
+    });
+
+    var socialMedia = {
+        fb : "www.facebook.com/ermias.asmelash",
+        twitter : "https://twitter.com/C443336007",
+        ig : "https://www.instagram.com/the_ethiopianist/"
+    };
+
+    var sm = function(){
+        var output = '<ul>',
+            lists = document.querySelectorAll('.smIcons');
+
+        for(var key in arguments[0]){
+            output += '<li><a href="' + socialMedia[key] +'">' +
+                '<img src="img/' + key + '.png" alt="icon for ' + key + '">' +
+                '</a></li>';
+        }
+
+        output += '</ul>';
+
+        for(var i = lists.length -1; i >= 0; i--){
+            lists[i].innerHTML = output;
+        }
+    }(socialMedia);
+
     $('nav a').on('click', (function(){
 
         //Assign the current class
@@ -72,3 +105,4 @@ $(document).ready(function(){
     });
 
 });
+

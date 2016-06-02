@@ -20,7 +20,7 @@ a{
 }
 
 header{
-    background: #A9A9A9;
+    background: rgb(65, 72, 77);
     min-height: 55px;
     color: #ffffff;
 }
@@ -76,7 +76,7 @@ section{
     text-align: center;
 }
 .tagline{
-    background:  #BDBDBD;
+    background:  rgb(112, 38,57);
     color : #ffffff;
 }
 
@@ -109,7 +109,7 @@ section{
 }
 
 footer{
-    background: #DBDBDB;
+    background: rgb(65, 72, 77);
     height: 55px;
     color : #ffffff;
     text-align: center;

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gameRefinery">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no"/>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/sweetalert2.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Game Refinery</title>
+</head>
+<body ng-controller="mainCtrl">
+<header>
+
+    <div class="container">
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+
+            <div class="navbar-header">
+                <h1>GameRefinery</h1>
+            </div>
+        </nav>
+    </div>
+
+</header>
+
+<div class="gr_form">
+    <h1 class="head_title">Add Person</h1>
+
+    <div class="container-fluid">
+
+        <form class="form-inline" ng-submit="addPerson()">
+
+            <div class="row">
+
+                <div class="form-group">
+                    <input class="form-control name input-lg" type="text" name="name"
+                           ng-model="newName" placeholder="Name"/>
+
+                    <select placeholder="Gender" name="gender" ng-model="newGender" class="form-control gender input-lg"
+                            ng-options="g.type as g.type for g in gender"></select>
+
+                    <div class="age_submit">
+                        <input placeholder="Age" class="form-control age input-lg" type="number" placeholder="Age"
+                               min="1" max="120" ng-model="newAge">
+
+                        <button class="btn btn-default submit_button input-lg" type="submit">
+                            <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+
+        <table class="table table-striped">
+            <thead>
+            <tr ng-model="predicate">
+                <td>
+                    <a href="" ng-click="order('name')">Name <i class="fa fa-sort fa-lg" aria-hidden="true"></i></a>
+                <td><a href="" ng-click="order('gender')">Gender</a></td>
+                <td><a href="" ng-click="order('age')">Age</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr dir-paginate="p in person | orderBy:predicate:reverse | itemsPerPage:20 track by $index">
+
+
+                <td class="name_td">
+                    <span ng-model="newName" data-ng-hide="editMode">{{p.name}}</span>
+                    <input type="text" data-ng-show="editMode" data-ng-model="p.name" data-ng-required/>
+                </td>
+                <td>
+                    <span data-ng-hide="editMode" ng-model="newGender" >{{p.gender}}</span>
+
+                    <select data-ng-show="editMode"  placeholder="Gender" name="gender" ng-model="p.gender"
+                            ng-options="g.type as g.type for g in gender"></select>
+
+                </td>
+                <td>
+                    <div ng-model="newAge" data-ng-hide="editMode">{{p.age}}</div>
+                    <input data-ng-show="editMode" placeholder="Age" type="number" placeholder="Age" min="1" max="120"
+                           ng-model="p.age">
+
+                </td>
+                <td class="edit_td">
+                    <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"
+                       type="submit" data-ng-hide="editMode" data-ng-click="editMode = true; editPerson(p)"
+                       class="btn btn-default">
+
+                    </i>
+
+                    <button type="button" data-ng-show="editMode" data-ng-click="editMode = false; saveField()"
+                            class="btn btn-default">Save
+                    </button>
+                    <button type="submit" data-ng-show="editMode" data-ng-click="editMode = false; cancel()"
+                            class="btn btn-default">Cancel
+                    </button>
+                </td>
+                <td class="delete_td">
+                    <i class="fa fa-trash-o fa-lg" ng-click="remove(p)"></i>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="paginate_it">
+            <dir-pagination-controls
+                    max-size="20"
+                    direction-links="false"
+                    boundary-links="false">
+            </dir-pagination-controls>
+        </div>
+    </div>
+</div>
+</body>
+</html>

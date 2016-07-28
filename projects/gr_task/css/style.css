@@ -1,0 +1,209 @@
+.gr_form {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.row {
+    margin-left: 0;
+
+}
+
+.form-inline .form-control {
+    width: 30%;
+    background-color: #f5f5f5;
+
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-inline {
+    padding-bottom: 60px;
+}
+
+.name_td {
+    width: 40%;
+}
+
+.edit_td {
+    width: 12%;
+}
+
+.delete_td {
+    width: 12%;
+}
+
+.head_title {
+    padding-left: 15px;
+    padding-bottom: 28px;
+}
+
+.container {
+    width: 100%;
+}
+
+.paginate_it {
+    text-align: center;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.submit_btn {
+    margin-bottom: 40px;
+}
+
+.form-inline .input-group > .form-control {
+    background-color: #ddd;
+
+}
+
+.navbar-header {
+    width: 100%;
+}
+
+.age_submit {
+    width: 30%;
+    float: right;
+
+}
+
+input[type=text], select {
+    margin-bottom: 10px;
+
+}
+
+/* MEDIA QUERIES*/
+@media screen and (max-width: 1024px) {
+    .navbar-header h1 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .form-inline .form-control {
+        width: 100%;
+        margin-left: -10px;
+    }
+
+    /* .age {
+         float: left;
+         margin-right: -20px;
+
+     }*/
+    .submit_button {
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 40%;
+        margin-top: 10px;
+        background-color: #bcbcbc;
+
+    }
+
+    .head_title {
+        font-size: 22px;
+    }
+
+    .age_submit {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .gr_form {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 940px), only screen and (max-device-width: 940px) {
+
+    .navbar-header {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-inline {
+        width: 100%;
+
+    }
+
+    .container-fluid {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+    .navbar-header {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-inline {
+        width: 100%;
+
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
+    .navbar-header {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-inline {
+        width: 100%;
+
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .navbar-header {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-inline {
+        width: 100%;
+
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
+    .navbar-header {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-inline {
+        width: 100%;
+
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+}

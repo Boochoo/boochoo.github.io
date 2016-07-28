@@ -1,0 +1,14 @@
+{
+  "name": "gamerefinery",
+  "version": "1.0.0",
+  "description": "a preliminary task for Gamerefinery",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "boochoo",
+  "license": "ISC",
+  "dependencies": {
+    "ng-table": "^1.0.0"
+  }
+}

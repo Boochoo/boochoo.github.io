@@ -1,7 +1,0 @@
-<header>
-			<time datetime="2011-11-17">17<sup>th</sup> of November 2011</time> &lt;= This is a date using the &lt;time&gt; tag.
-			<h1>This will be an article section</h1>
-		</header>
-		This is an &lt;article&gt;. And we can reuse the &lt;h1&gt; heading 
-tag (in an &lt;header&gt; section). Let see how it render it in 
-different browsers?
